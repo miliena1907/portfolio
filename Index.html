@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>HomePage</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="wrapper-header">
+         <div class="menu-icon"><span></span></div>
+         <nav>
+            <ul class="menu">
+               <li><a href="work.html">Works</a></li>
+               <li><a href="blog.html">Blog</a></li>
+               <li><a href="https://www.facebook.com/">Contact</a></li>
+            </ul>
+         </nav>
+         <div class="header-content">
+            <div class="text-content">
+               <h1>Hi, I am John,<br>
+                  Creative Technologist</h1>
+               <div class="text title">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                  officia
+                  consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+               <button>Download Resume</button>
+            </div>
+            <div class="image"><img src="img/avatar.jpg" alt=""></div>
+         </div>
+      </div>
+      <main>
+         <section class="recent-posts">
+            <div class="wrapper-recent-posts">
+               <div class="recent-posts-header">
+                  <p>Recent posts</p>
+                  <p><a href="#">View all</a></p>
+               </div>
+               <div class="recent-posts-content">
+                  <div class="recent-post">
+                     <h3><a href="#">Making a design system from scratch</a></h3>
+                     <div class="data">12 Feb 2020 <span>|</span>Design, Pattern</div>
+                     <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+                  </div>
+                  <div class="recent-post">
+                     <h3><a href="#">Creating pixel perfect icons in Figma</a></h3>
+                     <div class="data">12 Feb 2020 <span>|</span>Figma, Icon Design</div>
+                     <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="featured-works">
+            <div class="featured-works-header">Featured works</div>
+            <div class="featured-work-content">
+               <div class="featured-work">
+                  <div class="featured-image"><a href="#"><img src="img/img1.jpg" alt="" class="works-image"></a></div>
+                  <div class="featured-text item">
+                     <h2><a href="#">Designing Dashboards</a></h2>
+                     <p><span>2022</span> Dashboard</p>
+                     <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+                  </div>
+               </div>
+               <div class="featured-work">
+                  <div class="featured-image"><a href="#"><img src="img/img2.jpg" alt="" class="works-image"></a></div>
+                  <div class="featured-text item">
+                     <h2><a href="#">Vibrant Portraits of 2020</a></h2>
+                     <p><span>2018</span>Illustration</p>
+                     <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+                  </div>
+               </div>
+               <div class="featured-work">
+                  <div class="featured-image"><a href="#"><img src="img/img3.jpg" alt="" class="works-image"></a></div>
+                  <div class="featured-text item">
+                     <h2><a href="#">36 Days of Malayalam type</a></h2>
+                     <p><span>2018</span> Typography</p>
+                     <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                        officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <div class="footer-container">
+            <div class="footer-social">
+               <a href="#" class="social-item icon-fb"></a>
+               <a href="#" class="social-item icon-insta"></a>
+               <a href="#" class="social-item icon-twitter"></a>
+               <a href="#" class="social-item icon-linkedin"></a>
+            </div>
+         </div>
+         <div class="footer-text">Copyright ©2020 All rights reserved </div>
+      </footer>
+   </div>
+   <script src="script.js"></script>
+   <script>
+      const iconMenu = document.querySelector('.menu-icon');
+      const nav = document.querySelector('.menu');
+      const main = document.querySelector('main');
+      const header = document.querySelector('.header-content');
+      iconMenu.addEventListener("click", function () {
+         iconMenu.classList.toggle('menu-icon-active');
+         nav.classList.toggle('menu-active');
+         main.classList.toggle('disable');
+         header.classList.toggle('disable')
+      });
+      main.addEventListener("click", function () {
+         nav.classList.remove('menu-active');
+         main.classList.remove('disable');
+         iconMenu.classList.remove('menu-icon-active');
+      });
+      header.addEventListener("click", function () {
+         nav.classList.remove('menu-active');
+         main.classList.remove('disable');
+         iconMenu.classList.remove('menu-icon-active');
+      });
+   </script>
+</body>
+
+</html>

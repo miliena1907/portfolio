@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Blog</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="wrapper-header">
+         <div class="menu-icon"><span></span></div>
+         <nav>
+            <ul class="menu">
+               <li><a href="work.html">Works</a></li>
+               <li><a href="blog.html">Blog</a></li>
+               <li><a href="https://www.facebook.com/">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
+      <main>
+         <div class="wrapper-blog">
+            <h1>Blog</h1>
+            <div class="item">
+               <h2><a href="#"> UI Interactions of the week</a></h2>
+               <p><span class="span"> 12 Feb 2019 </span> <span>|</span> Express, Handlebars</p>
+               <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                  consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+            </div>
+            <div class="item">
+               <h2><a href="#"> UI Interactions of the week</a></h2>
+               <p><span class="span"> 12 Feb 2019 </span> <span>|</span> Express, Handlebars</p>
+               <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                  consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+            </div>
+            <div class="item">
+               <h2><a href="#"> UI Interactions of the week</a></h2>
+               <p><span class="span"> 12 Feb 2019 </span> <span>|</span> Express, Handlebars</p>
+               <div class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                  consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+            </div>
+            <div class="item">
+               <h2><a href="#"> UI Interactions of the week</a></h2>
+               <p><span class="span"> 12 Feb 2019 </span> <span>|</span> Express, Handlebars</p>
+               <div class="text">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+                  enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer>
+         <div class="footer-container">
+            <div class="footer-social">
+               <a href="#" class="social-item icon-fb"></a>
+               <a href="#" class="social-item icon-insta"></a>
+               <a href="#" class="social-item icon-twitter"></a>
+               <a href="#" class="social-item icon-linkedin"></a>
+            </div>
+         </div>
+         <div class="footer-text">Copyright ©2020 All rights reserved </div>
+      </footer>
+   </div>
+   <script src="script.js"></script>
+   <script>
+      const iconMenu = document.querySelector('.menu-icon');
+      const nav = document.querySelector('.menu');
+      const main = document.querySelector('.wrapper-blog');
+      iconMenu.addEventListener("click", function () {
+         iconMenu.classList.toggle('menu-icon-active');
+         nav.classList.toggle('menu-active');
+         main.classList.toggle('disable');
+      });
+      main.addEventListener("click", function () {
+         nav.classList.remove('menu-active');
+         main.classList.remove('disable');
+         iconMenu.classList.remove('menu-icon-active');
+      });
+   </script>
+</body>
+
+</html>
